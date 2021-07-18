@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <style>
+            input,select, 
+textarea{
+    width:40%;
+    padding:12px;
+    border: 1px solid ;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top:10px;
+    margin-bottom:16px;
+    resize:vertical;
+
+}
+input[type=button] {
+    width:20%;
+    background-color: rgb(18, 70, 105);
+    color: #fff;
+}
+.error-msg {
+    margin-bottom: 5px;
+    color: rgba(255, 0, 0, 0.507);
+}
+
+.form-container {
+    margin: 2% 10%;
+}
+.container {
+    min-height: 700px;
+    min-width: 80%;
+    background-repeat: no-repeat;
+    background-image:url(https://www.pikpng.com/pngl/b/222-2225097_contact-us-contact-us-background-image-free-clipart.png);
+}
+input[type=submit]
+{
+    background-color:rgb(18, 70, 105);;
+    color:white;
+    padding: 12px 20px;
+    border:none;
+    width: 150px;
+    border-radius:4px;
+    cursor:pointer;
+}
+li {
+    font-size: 20px;
+}
+.content-container {
+    padding: 10% 30%;
+    background-color: transparent;
+    width: 500px;
+    height: 300px;
+}
+input[type=submit]:hover{
+    background-color:#2ca8fa;
+}
+
+.button{
+    background-color: gray;
+    border-color: honeydew;
+    text-align: center;
+    padding:14px 40px;
+    display:inline-block;
+    font-size: 16px;
+}
+        </style>
+        <title>
+            Contact
+        </title>
+       
+    </head>
+    <body>
+        <div class="container" style="text-align: center;" *ngIf="!isSubmit">
+            <h1 style="color: rgb(18, 70, 105);">Contact Us</h1>
+            <form class="form-container" action="database.php" method="POST">
+            <!-- <label for="mail">Email</label><br> -->
+            <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+            placeholder="Your Email id.." Name="mail"  required /><br/>
+              
+              <!-- <label for="name">Name</label><br> -->
+              <input type="text" 
+              placeholder=" Your Name.." Name="name" required/> <br/>
+                
+              <!-- <label for="subject">Subject</label><br> -->
+              <input type="text" 
+              placeholder="Type a Subject.." Name="subject" required/><br/>
+              <!-- <label for="message">Message</label><br> -->
+              <input type="text" 
+              placeholder="Type a message.." Name="message"  required/><br/>
+              
+              <!-- <label for="query">Query</label><br> -->
+              <input type="text" 
+              placeholder="Ask any query.." Name="query" required/><br/>
+              
+              <input type="submit" id= "Submit" value="Submit"  
+              /><br/>
+          
+          </form>
+          </div>
+         
+          
+          </div>
+    </body>
+</html>
